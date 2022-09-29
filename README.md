@@ -19,7 +19,7 @@ I have uploaded a folder that contains my original results.
 ## Install
 - pip install the packages from requirements.txt.
     - the Stanza pipelines can be downloaded directly in `stanza_test.py`. If you have not used Stanza before please head there and comment in the download commands (and run the file).
-- download the code and make sure the three corpus files are placed in the same directory as the code.
+- download the zip files which contain the files for the corpora. Unzip them into the same directory where you put the code.
 
 Detailed installation instructions for spaCy can be found [here](https://spacy.io/usage) and for Stanza [here](https://stanfordnlp.github.io/stanza/installation_usage.html).
 
