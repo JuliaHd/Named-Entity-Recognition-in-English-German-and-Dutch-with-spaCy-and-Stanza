@@ -1,0 +1,9 @@
+pip install pandas==1.2.4
+pip install spacy==3.4.1
+pip install de-core-news-lg==3.4.0
+pip install de-core-news-md==3.4.0
+pip install en-core-web-lg==3.4.0
+pip install en-core-web-md==3.4.0
+pip install nl-core-news-lg==3.4.0
+pip install nl-core-news-md==3.4.0
+pip install xx-ent-wiki-sm
