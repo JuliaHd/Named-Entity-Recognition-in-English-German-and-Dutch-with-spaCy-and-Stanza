@@ -33,7 +33,7 @@ To change the tagging pipeline and evaluation used, you have to manually comment
 
 - Pipeline: xxx_yy_results_nlp_zz0
 - Evaluation: xxx_yy_results_nlp_zz0_eval
-- nlp_zz0 is irrelevant for Stanza since there is only one pipeline per language.
+- nlp_zz0 is irrelevant for Stanza since there is only one pipeline per language. Only use the language tag zz: xxx_yy_results_zz.
 - xxx = ger, eng, nld
 - sp = (spaCy); st = (Stanza)
 - zz = language tag: de, en, nl, multi. 
