@@ -85,11 +85,11 @@ def named_entity_recognition_st(lang_sent, nlp_model):
     Args:
         lang_sent (list[str]): A list of sentences.
         nlp_model (Language): An NLP model that matches the language of
-            lang_sent. Use a Stanza model.
+            lang_sent. A Stanza model must be used for tagging.
 
     Returns:
         list[tuple]: A list of trained sentences in tuples of the format 
-            [('Sentence.', [[start_char, end_char, 'entity_type']])]
+            [('Sentence.', [[start_char, end_char, 'entity_type']])].
 
     """
 
@@ -105,7 +105,6 @@ def named_entity_recognition_st(lang_sent, nlp_model):
                 results.append([sentences, entities])
             #print(results)
         result_tuples = [tuple(x) for x in results]
-        #print(result_tuples)
         return result_tuples
         
     except Exception as e: print(e)
@@ -120,14 +119,16 @@ def evaluate_ner_st(examples, nlp_model):
 
     Args:
         examples (list[tuple]): List of tagged tuples in the format 
-            [('Sentence.', [[start_char, end_char, 'ENTITY_TYPE']])].
+            [('Sentence.', [[start_char, end_char, 'ENTITY_TYPE']]), (...)].
         nlp_model (Language): The NLP model used for evaluation. It must match
-            the language of examples. Use a spaCy model.
+            the language of examples. A spaCy model must be used for
+            evaluation.
 
     Returns:
         Dict[str, Any]: The precision, recall, and F1-score in total and per
             entity type as well as the tokenization accuracy. Other categories
             receive None.
+
     Raises:
         UserWarning: [W030] Some entities could not be aligned in the text.
 
