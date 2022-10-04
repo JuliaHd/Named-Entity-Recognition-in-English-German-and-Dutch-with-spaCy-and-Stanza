@@ -79,7 +79,7 @@ def named_entity_recognition_sp(lang_sent, nlp_model):
 
     Returns:
         list[tuple]: A list of trained sentences in tuples of the format 
-            [('Sentence.', [[start_char, end_char, 'entity_type']])]
+            [('Sentence.', [[start_char, end_char, 'entity_type']])].
 
     """
 
@@ -87,13 +87,11 @@ def named_entity_recognition_sp(lang_sent, nlp_model):
         for sentence in lang_sent:
             doc = nlp_model(sentence)
             entities = []
-
             for ent in doc.ents:
                 entities.append([ent.start_char, ent.end_char, ent.label_])
                 results.append([sentence, entities])
         #print(results)
         result_tuples = [tuple(x) for x in results]
-        #print(type(result_tuples))
         return result_tuples
 
     except Exception as e: print(e)
@@ -109,7 +107,7 @@ def evaluate_ner_sp(examples, nlp_model):
 
     Args:
         examples (list[tuple]): List of tagged tuples in the format 
-            [('Sentence.', [[start_char, end_char, 'ENTITY_TYPE']])].
+            [('Sentence.', [[start_char, end_char, 'ENTITY_TYPE']]), (...)].
         nlp_model (Language): The NLP model used for evaluation. It must match
             the language of examples.
 
