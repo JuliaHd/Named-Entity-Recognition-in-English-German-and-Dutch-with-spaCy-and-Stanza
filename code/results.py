@@ -8,7 +8,7 @@ file is purely for legibility and should not be used before further editing.
 This module requires "pandas", "time", "csv", "spacy", and "stanza".
 
 Example:
-    Follow the naming of the variables and run one pipeline [NER function??] and its evaluation at a
+    Follow the naming of the variables and run one pipeline and its evaluation at a
     time. Otherwise, the results will be skewed::
     
         ger_sp_results_nlp_de2 = named_entity_recognition_sp(ger_sent[:163111], nlp_de2)
@@ -18,7 +18,68 @@ Example:
         export_to_csv(ger_sp_results_nlp_de2)  # Optional.
 
 Attributes:
-    - add?
+    start_time_all (float): Tracks CPU time across the entire module.
+    start_time_ger (float): Tracks CPU time for German.
+    ger_sp_results_nlp_de2 (list[tuple]): List of tagging results for German
+        with the spaCy medium pipeline.
+    ger_sp_results_nlp_multi (list[tuple]): List of tagging results for German
+        with the spaCy multi-language pipeline.
+    ger_sp_results_nlp_de2_eval (Dict[str, Any]): Dictionary of the evaluation
+        results for German with the spaCy large pipeline used for evaluation.
+    ger_sp_results_nlp_multi_eval (Dict[str, Any]): Dictionary of the 
+        evaluation results for German with the spaCy large pipeline used for
+        evaluation.
+    end_time_ger (float): Tracks CPU time. Used to calculate total run-time of
+        German.
+    start_time_eng (float): Tracks CPU time for English.
+    eng_sp_results_nlp_en2 (list[tuple]): List of tagging results for English
+        with the spaCy medium pipeline.
+    eng_sp_results_nlp_multi (list[tuple]): List of tagging results for English
+        with the spaCy multi-language pipeline.
+    eng_sp_results_nlp_en2_eval (Dict[str, Any]): Dictionary of the evaluation
+        results for English with the spaCy large pipeline used for evaluation.
+    eng_sp_results_nlp_multi_eval (Dict[str, Any]): Dictionary of the 
+        evaluation results for English with the spaCy large pipeline 
+        used for evaluation.
+    end_time_eng (float): Tracks CPU time. Used to calculate total run-time of
+        English.
+    start_time_nld (float): Tracks CPU time for Dutch.
+    nld_sp_results_nlp_nl2 (list[tuple]): List of tagging results for Dutch
+        with the spaCy medium pipeline.
+    nld_sp_results_nlp_multi (list[tuple]): List of tagging results for Dutch
+        with the spaCy multi-language pipeline.
+    nld_sp_results_nlp_nl2_eval (Dict[str, Any]): Dictionary of the evaluation
+        results for Dutch with the spaCy large pipeline used for evaluation.
+    nld_sp_results_nlp_multi_eval (Dict[str, Any]): Dictionary of the 
+        evaluation results for Dutch with the spaCy large pipeline used for
+        evaluation.
+    end_time_nld (float): Tracks CPU time. Used to calculate total run-time of
+        Dutch.
+    end_time_spacy (float): Tracks CPU time. Used to calculate total run-time
+        of spaCy.
+    ger_st_results (list[tuple]): List of tagging results for German with
+        Stanza.
+    ger_st_results_eval (Dict[str, Any]): Dictionary of the evaluation results
+        for German with the spaCy large pipeline used for evaluation.
+    ger_st_results_multi_eval (Dict[str, Any]): Dictionary of the evaluation
+        results for German with the spaCy multi-language pipeline used for 
+        evaluation.
+    eng_st_results (list[tuple]): List of tagging results for English with
+        Stanza.
+    eng_st_results_eval (Dict[str, Any]): Dictionary of the evaluation results
+        for English with the spaCy large pipeline used for evaluation.
+    eng_st_results_multi_eval (Dict[str, Any]): Dictionary of the evaluation
+        results for English with the spaCy multi-language pipeline used for 
+        evaluation.
+    nld_st_results (list[tuple]): List of tagging results for Dutch with
+        Stanza.
+    nld_st_results_eval (Dict[str, Any]): Dictionary of the evaluation results
+        for Dutch with the spaCy large pipeline used for evaluation.
+    nld_st_results_multi_eval (Dict[str, Any]): Dictionary of the evaluation
+        results for English with the spaCy multi-language pipeline used for 
+        evaluation.
+    end_time_all (float): Tracks CPU time. Used to calculate total run-time of
+        Stanza and the module.
     
 """
 
@@ -37,13 +98,13 @@ def export_to_csv(result):
             named_entity_recognition_st.
 
     Returns:
-        DataFrame: A DataFrame of the results from the functions mentioned
+        df (DataFrame): A DataFrame of the results from the functions mentioned
             above, separated into two columns: the sentence and the entity type
             plus position. Only for legibility of the results.
 
     """
     df = pd.DataFrame(result, columns=["sentence", " entity type + position"])
-    df.to_csv(r"./results.csv", index = False, header = True, mode="a", encoding="utf-8-sig")
+    df.to_csv(r"./results.csv", index=False, header=True, mode="a", encoding="utf-8-sig")
     return df
 
 start_time_all = time.process_time()
