@@ -49,7 +49,7 @@ In `spacy_test.py` spacy.load() the pipeline, like `spacy.load("de_core_news_sm"
 
 Honnibal, M., Montani, I., Van Landeghem, S. & Boyd, A. (2020). spaCy: industrial-strength natural language    processing in Python. https://doi.org/10.5281/zenodo.1212303.
 
-Qi, P., Zhang, Y., Zhang, Y., Bolton, J., & Manning, C. D. (2020). Stanza: A python natural language processing toolkit for many human languages. In Association for Computational Linguistics (ACL) System Demonstrations. https://arxiv.org/abs/2003.07082
+Qi, P., Zhang, Y., Zhang, Y., Bolton, J., & Manning, C. D. (2020). Stanza: A python natural language processing toolkit for many human languages. In Association for Computational Linguistics (ACL) System Demonstrations. https://arxiv.org/abs/2003.07082.
 
-Tatoeba. (n.d.). Tatoeba: collection of sentences and translations. Retrieved September 29, 2022, from https://tatoeba.org/en/
+Tatoeba. (n.d.). Tatoeba: collection of sentences and translations. Retrieved September 29, 2022, from https://tatoeba.org/en/.
 
