@@ -6,7 +6,7 @@
 
 This project aims to compare the performance of NER with [spaCy](https://spacy.io/) (Honnibal et al., 2020) and [Stanza](https://stanfordnlp.github.io/stanza/) (Qi et al., 2020) in speed, accuracy (precision, recall, F1-score) and ease of implementation in translated text of English, German, and Dutch, using [Tatoeba](https://tatoeba.org/en/) (released under a CC-BY 2.0 FR license) as a corpus. The project uses spaCy's and Stanza's pretrained NER models for tagging and evaluation.
 
-I uploaded a "Results Table" PDF that contains my original results.
+I uploaded a "Results Table" PDF that contains my original results as well as csv files that contain all tagging results.
 
 ## Requirements
 - Python 3.9.4
