@@ -27,7 +27,7 @@ Detailed installation instructions for spaCy can be found [here](https://spacy.i
 
 If you installed everything correctly and you do not want to make any changes to the source code, you can simply run the `results.py` module. Unchanged, it will print the tagged sentences and their evaluation for German with spaCy on the medium module and the large module used for evaluation.
 
-If you get an error message `FileNotFoundError: [Errno 2] No such file or directory:`, go to corpora.py and put in the absolute path of your directory where the corpus files go.
+If you get an error message `FileNotFoundError: [Errno 2] No such file or directory:`, go to `corpora.py` and put in the absolute path of your directory where you put the corpus files.
 
 To change the tagging pipeline and evaluation used, you have to manually comment out the previous pipeline and its evaluation and comment in the pipeline and evaluation you want to use. All pipelines/ evaluation variables follow the same naming pattern and can be matched that way:
 
