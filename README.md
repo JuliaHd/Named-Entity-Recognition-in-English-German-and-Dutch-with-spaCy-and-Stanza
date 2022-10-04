@@ -28,9 +28,8 @@ If you get an error message `FileNotFoundError: [Errno 2] No such file or direct
 
 To change the tagging pipeline and evaluation used, you have to manually comment out the previous pipeline and its evaluation and comment in the pipeline and evaluation you want to use. All pipelines/ evaluation variables follow the same naming pattern and can be matched that way:
 
-- Pipeline: xxx_yy_results_nlp_zz0
-- Evaluation: xxx_yy_results_nlp_zz0_eval
-- nlp_zz0 is irrelevant for Stanza since there is only one pipeline per language. Only use the language tag zz: xxx_st_results_zz and xxx_st_results_zz_eval.
+- Pipeline: spaCy: xxx_sp_results_nlp_zz0; Stanza: xxx_st_results
+- Evaluation: spaCy: xxx_yy_results_nlp_zz0_eval; Stanza: xxx_st_results_eval/xxx_st_results_multi_eval
 - xxx = ger, eng, nld
 - sp = (spaCy); st = (Stanza)
 - zz = language tag: de, en, nl, multi. 
