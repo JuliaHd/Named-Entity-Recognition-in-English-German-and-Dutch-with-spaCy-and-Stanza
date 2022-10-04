@@ -133,6 +133,7 @@ def evaluate_ner_st(examples, nlp_model):
         UserWarning: [W030] Some entities could not be aligned in the text.
 
     """
+    
     try:
         scorer = Scorer()
         examples_list = []
