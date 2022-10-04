@@ -10,9 +10,7 @@ I uploaded a "Results Table" PDF that contains my original results as well as cs
 
 ## Requirements
 - Python 3.9.4
-- Pandas 1.2.4
-- spaCy 3.4.1 and its medium, large, and multi-language pipelines
-- Stanza 1.4.1 and its pipelines
+- see requirements.txt
 
 # Getting Started
 
