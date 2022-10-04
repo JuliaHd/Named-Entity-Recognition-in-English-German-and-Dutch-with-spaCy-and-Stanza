@@ -55,6 +55,7 @@ At the moment it is only possible to implement other spaCy and Stanza pipelines.
 2. Instantiate the pipeline with `stanza.Pipeline('xx', verbose=False, processors='tokenize, ner', use_gpu=True)` (and assign it a variable). Adjust the pipeline options as needed. The pipeline options can be found in Stanza's [documentation](https://stanfordnlp.github.io/stanza/pipeline.html).
 3. Call the function `named_entity_recognition_st` with your variable in `results.py` to tag your list of sentences with named entities.
 4. Call `evaluate_ner_st` with the results from the previous function and the desired evaluation pipeline to get the precision, recall, and F1-score. Keep in mind `named_entity_recognition_st`'s results can only be evaluated with a spaCy pipeline as of now.
+5. (Optional) If you want to evaluate a Stanza pipeline with a new spaCy pipeline follow the spaCy instructions above but instantiate the pipeline in `stanza_test.py` instead of `spacy_test.py`.
 
 # References
 
