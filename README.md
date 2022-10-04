@@ -22,7 +22,7 @@ Detailed installation instructions for spaCy can be found [here](https://spacy.i
 
 ## Usage
 
-If you installed everything correctly and you do not want to make any changes to the source code, you can simply run the `results.py` module. The module will print the tagged sentences and their evaluation for German with spaCy on the medium module (tagger) and the large module (evaluation).
+If you installed everything correctly and you do not want to make any changes to the source code, you can simply run the `results.py` module. Without any changes beforehand, the module will print the tagged sentences and their evaluation for German with spaCy on the medium module (tagger) and the large module (evaluation).
 
 If you get an error message `FileNotFoundError: [Errno 2] No such file or directory:`, go to `corpora.py` and put in the absolute path of the corpus files.
 
