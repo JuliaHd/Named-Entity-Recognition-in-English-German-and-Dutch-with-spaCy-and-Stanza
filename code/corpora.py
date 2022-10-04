@@ -1,6 +1,6 @@
 """Exports a list of sentences from a corpus file per language.
 
-Opens the three corpus.tsv files (e.g. deu_sentences-tsv) used in this project
+Opens the three corpus.tsv files (e.g. deu_sentences.tsv) used in this project
 and strips them of their index numbering and language tags before appending
 every sentence in the corpus to an empty list. Do not do anything but execute
 this module.
