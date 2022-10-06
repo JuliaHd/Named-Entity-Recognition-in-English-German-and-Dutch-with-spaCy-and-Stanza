@@ -2,11 +2,11 @@
 
 # About
 
-"Named Entity Recognition in English, German, and Dutch with SpaCy and Stanza" is my project work for my "Advanced NLP with Python" class at Heinrich-Heine-Universität Düsseldorf.
+"Named Entity Recognition in English, German, and Dutch with SpaCy and Stanza" is my project work in my "Advanced NLP with Python" class at Heinrich-Heine-Universität Düsseldorf.
 
 This project aims to compare the performance of Named Entity Recognition (NER) with [spaCy](https://spacy.io/) (Honnibal et al., 2020) and [Stanza](https://stanfordnlp.github.io/stanza/) (Qi et al., 2020) in speed, accuracy (precision, recall, F1-score) and ease of implementation in translated text of English, German, and Dutch, using [Tatoeba](https://tatoeba.org/en/) (released under a CC-BY 2.0 FR license) as a corpus. The project uses spaCy's and Stanza's pretrained NER models for tagging and evaluation.
 
-I uploaded a "Results Table" PDF that contains my original results as well as csv files that contain all tagging results.
+I uploaded a "Results Table" PDF that contains my original evaluation results as well as csv files that contain all tagging results.
 
 ## Requirements
 - Python 3.9.4
@@ -17,6 +17,7 @@ I uploaded a "Results Table" PDF that contains my original results as well as cs
 ## Install
 - pip install the packages in requirements.txt.
 - the Stanza pipelines can be downloaded directly in `stanza_test.py`. If you have not used Stanza before please head there and comment in the download commands (and run the file).
+- Unzip the corpus files. Make sure the (unzipped) corpus files are placed in the same directory as the Python modules.
 
 Detailed installation instructions for spaCy can be found [here](https://spacy.io/usage) and for Stanza [here](https://stanfordnlp.github.io/stanza/installation_usage.html).
 
@@ -37,7 +38,7 @@ To change the tagging pipeline and evaluation used, you have to manually comment
 
 ## Adding a new corpus
 
-To use a different corpus, instantiate it in `corpora.py`, then import it to `results.py`. It must be a list of sentences.
+To use a different corpus, instantiate it in `corpora.py` manually, then import it to `results.py`. It must be a list of sentences.
 
 ## Adding a new pipeline
 
